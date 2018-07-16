@@ -30,8 +30,19 @@ const Client = Conn.define('client', {
   phone: {type: Sequelize.INTEGER, allowNull: true},
 })
 // // Generating demo Data
+const Supplier = Conn.define('supplier', {
+  taxcode: {type: Sequelize.STRING, allowNull: false},
+  name: {type: Sequelize.STRING, allowNull: false},
+  address: {type: Sequelize.STRING, allowNull: true},
+  phone: {type: Sequelize.STRING, allowNull: true},
+})
+
+Conn.authenticate()
+
+// Generating demo Data
 // import _d from 'lodash'
 // import Faker from 'faker'
+
 // Conn.sync({force: true}).then(() => {
 //   console.log('DB Structure created ...')
 //   _d.times(100, () => {
@@ -44,5 +55,16 @@ const Client = Conn.define('client', {
 //   })
 // })
 
-Conn.authenticate()
+// Conn.sync({force: true}).then(() => {
+//   console.log('DB Structure created ...')
+//   _d.times(100, () => {
+//     return Supplier.create({
+//       taxcode: Faker.address.countryCode(),
+//       name: Faker.commerce.productName(),
+//       address: Faker.address.streetAddress(),
+//       phone: Faker.phone.phoneNumber(),
+//     })
+//   })
+// })
+
 export default Conn

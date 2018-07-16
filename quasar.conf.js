@@ -15,9 +15,10 @@ module.exports = function(ctx) {
     supportIE: false,
     build: {
       scopeHoisting: true,
-      vueRouterMode: 'history',
+      vueRouterMode: 'hash',
+      publicPath: '',
+      gzip: true,
       // vueCompiler: true,
-      // gzip: true,
       // analyze: true,
       // extractCSS: false,
       extendWebpack(cfg) {

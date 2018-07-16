@@ -1,4 +1,5 @@
 import Express from 'express'
+// import history from 'connect-history-api-fallback'
 import GraphHttp from 'express-graphql'
 import ServeStatic from 'serve-static'
 import schema from './schema'
@@ -13,6 +14,12 @@ app.use(
     graphiql: true,
   })
 )
+// app.use(
+//   history({
+//     index: '',
+//     verbose: true,
+//   })
+// )
 
 app.listen(process.env.PORT || APP_PORT, () => {
   console.log(`VLXD_API listening on port ${APP_PORT} ...`)
