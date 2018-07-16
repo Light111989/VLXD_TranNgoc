@@ -2,8 +2,8 @@ import Sequelize from 'sequelize'
 
 const Op = Sequelize.Op
 
-const Conn = new Sequelize('heroku_c53a18f60a793d9', 'b8558b412c7ee2', 'bf3ad615', {
-  host: 'us-cdbr-iron-east-04.cleardb.net',
+const Conn = new Sequelize('vlxd', 'root', 'root', {
+  host: 'localhost',
   dialect: 'mysql',
   operatorsAliases: Op,
   pool: {
@@ -22,17 +22,24 @@ const Product = Conn.define('product', {
   listingPrice: {type: Sequelize.INTEGER, allowNull: true},
 })
 
-// Generating demo Data
+// eslint-disable-next-line no-unused-vars
+const Client = Conn.define('client', {
+  code: {type: Sequelize.STRING, allowNull: false},
+  name: {type: Sequelize.STRING, allowNull: false},
+  address: {type: Sequelize.STRING, allowNull: true},
+  phone: {type: Sequelize.INTEGER, allowNull: true},
+})
+// // Generating demo Data
 // import _d from 'lodash'
 // import Faker from 'faker'
 // Conn.sync({force: true}).then(() => {
 //   console.log('DB Structure created ...')
 //   _d.times(100, () => {
-//     return Product.create({
+//     return Client.create({
 //       code: Faker.address.countryCode(),
 //       name: Faker.commerce.productName(),
-//       unit: Faker.commerce.productMaterial(),
-//       listingPrice: Faker.commerce.price(),
+//       address: Faker.commerce.productMaterial(),
+//       phone: Faker.commerce.price(),
 //     })
 //   })
 // })

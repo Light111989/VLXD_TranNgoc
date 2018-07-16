@@ -40,6 +40,10 @@
           <q-item-side icon="rss feed" />
           <q-item-main label="Twitter" sublabel="@quasarframework" />
         </q-item>
+        <q-item to="/clients">
+          <q-item-side icon="store" />
+          <q-item-main label="Khách Hàng" sublabel="Liệt Kê & Tìm Kiếm Khách Hàng" />
+        </q-item>
       </q-list>
     </q-layout-drawer>
 

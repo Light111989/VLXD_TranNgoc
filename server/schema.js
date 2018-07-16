@@ -1,6 +1,8 @@
 import {GraphQLSchema, GraphQLObjectType} from 'graphql'
 import qryProduct from './product/query'
 import mutProduct from './product/mutation'
+import qryClient from './client/query'
+import mutClient from './client/mutation'
 
 const query = new GraphQLObjectType({
   name: 'RootQuery',
@@ -8,6 +10,7 @@ const query = new GraphQLObjectType({
   fields: () => {
     return {
       ...qryProduct,
+      ...qryClient,
     }
   },
 })
@@ -18,6 +21,7 @@ const mutation = new GraphQLObjectType({
   fields() {
     return {
       ...mutProduct,
+      ...mutClient,
     }
   },
 })
