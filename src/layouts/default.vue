@@ -41,7 +41,7 @@
           <q-item-main label="Twitter" sublabel="@quasarframework" />
         </q-item>
         <q-item to="/clients">
-          <q-item-side icon="store" />
+          <q-item-side icon="people" />
           <q-item-main label="Khách Hàng" sublabel="Liệt Kê & Tìm Kiếm Khách Hàng" />
         </q-item>
       </q-list>

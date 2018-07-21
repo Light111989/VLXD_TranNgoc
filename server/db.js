@@ -29,7 +29,7 @@ const Client = Conn.define('client', {
   address: {type: Sequelize.STRING, allowNull: true},
   phone: {type: Sequelize.INTEGER, allowNull: true},
 })
-// // Generating demo Data
+// eslint-disable-next-line no-unused-vars
 const Supplier = Conn.define('supplier', {
   taxcode: {type: Sequelize.STRING, allowNull: false},
   name: {type: Sequelize.STRING, allowNull: false},
