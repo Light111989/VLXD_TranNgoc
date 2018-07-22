@@ -32,3 +32,6 @@ export const getIsModalOpened = state => {
 export const getEditingRec = state => {
   return state.editingRec
 }
+export const getIcon = state => {
+  return state.icon
+}
